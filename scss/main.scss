@@ -1,0 +1,458 @@
+@import "mediaQueries";
+
+@font-face {
+    font-family: "YekanBakh";
+    src: url(../fonts/YekanBakh-Regular.eot);
+    src: url(../fonts/YekanBakh-Regular.ttf);
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh, sans-serif, Tahoma;
+    margin: 0;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+// ------------------------------header-----------------------------------------
+
+.grayBackground {
+    background-color: rgb(249, 250, 251);
+    border-bottom-right-radius: 120px;
+}
+
+.banner {
+    min-height: calc(100vh - 60px);  
+    width: 100%;
+}
+
+.pizza {
+    left: 0;
+    top: 80px;
+    width: 50%;
+    height: 88%;  
+    img {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+    }
+}
+
+.headerBtns {
+    font-size: 14px;
+}
+
+.headerMainBtn {
+    background-color: #ff00a6;
+    color: #ffffff;
+    font-weight: 700;
+    height: 48px;
+    padding: 1px 6px;
+    border-radius: 5px;
+    &:hover{
+        background-color: #ff26b3;
+    }
+}
+
+.bannerMain {
+    padding-bottom: 30px;
+}
+
+.bannerMainContent {
+    margin-top: 150px;
+}
+
+.bannerTitle {
+    font-size: 45px;
+    font-weight: 400;
+    span {
+        color: #ff00a6;
+    }
+}
+
+.bannerSubTitle {
+    color: #53565c;
+}
+
+.bannerSearch {
+    background-color: #ffffff;
+    width: 35%;
+    min-width: 270px;
+    height: 56px;
+    border: 0.0625rem solid rgba(58, 61, 66, 0.12);
+    border-radius: 5rem;
+    box-shadow: rgba(58, 61, 66, 0.06) 0px 1px 0px, rgba(0, 0, 0, 0.2) 0px 4px 16px -8px;
+    margin-top: 1.75rem;
+    z-index: 100;
+    position: relative;
+    div {
+        color: rgb(166,170,173);
+        height: 20px;
+        align-items: center;
+        display: flex;
+        i {
+            margin-right: 20px;
+        }
+        input {
+            border: none;
+            margin-right: 10px;
+            font-size: 14px;
+            &::placeholder {
+                color: rgb(166,170,173);
+            }
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    button {
+        background-color: #ff00a6;
+        color: #ffffff;
+        height: 48px;
+        width: 48px;
+        border: 0.09375rem solid rgba(255, 0, 166, 0.06);
+        border-radius: 50%;
+        font-size: 18px;
+        font-weight: 700;
+        margin-left: 4px;
+        &:hover {
+            background-color: #ff26b3;
+        }
+    }  
+}
+
+.bannerCategories {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2.5rem);
+    padding: 32px 16px 10px;
+    margin-top: 80px;
+    border-radius: 1.5rem;
+}
+
+.bannerCategoriesItem {
+    min-width: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        width: 40px;
+        margin-bottom: 16px; 
+    }
+    p {
+        font-size: 12px;
+        color: rgb(83, 86, 92);
+    }
+}
+
+// ------------------------------categories-----------------------------------------
+
+.categories {
+    margin-top: 64px;
+}
+
+.categoriesItem {
+    padding: calc(1rem);
+    a {
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0.75rem;
+        }
+    }    
+}
+
+.InerCategoriesItem {
+    background-color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.75rem;
+    box-shadow: rgba(58, 61, 66 , 0.06) 0px 1px 0px, rgba(0, 0, 0 , 0.3) 0px 8px 32px -16px;
+    position: relative;
+    transition: all 200ms ease-in-out 0s;
+    padding: 0.1875rem;
+}
+
+.foodName {
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0.25rem 1rem 0.25rem 0.8125rem;
+    border-top-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    transition: all 200ms ease-in-out 0s;
+    p {
+        margin-bottom: 0;
+        margin-left: 0.8125rem;
+        color: rgb(58, 61, 66);
+        align-self: center;
+    }
+    i {
+        color: #ff00a6;
+        transition: all 200ms ease-in-out 0s;
+        align-self: center;
+        font-size: 14px;
+    }
+    &:hover {
+        i {
+            transform: translateX(-2px);
+        }
+    }
+}
+
+// --------------------------------app------------------------------
+
+.application {
+    margin-top: 150px;
+}
+
+.app {
+    padding: 64px;
+    background-color: rgb(235, 237, 240);
+    border-bottom-right-radius: 7.5rem;
+}
+
+.appInfo {
+    width: calc(100% - 424px);
+    padding-right: 80px;
+    h2 , p , div {
+        margin-bottom: 40px;
+        line-height: 2rem;
+ 
+    }
+    p {
+        font-size: 16px;
+        font-weight: 400; 
+        color: rgb(83, 86, 92);
+        text-align: right;
+        
+    }
+    div>p {
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+}
+
+.appLink {
+    margin-top: 6px;
+    width: 35vw;
+    min-width: 17.8125rem;
+    max-width: 50%;
+    height: 3rem;
+    background-color: rgb(255, 255, 255);
+    border: 0.0625rem solid rgba(58, 61, 66, 0.12);
+    border-radius: 0.375rem;
+    box-shadow: rgba(58, 61, 66 , 0.06) 0px 1px 0px, rgba(0, 0, 0 , 0.2) 0px 4px 16px -8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+        height: 100%;
+        border-radius: 0.375rem;
+        background-color: rgb(255, 255, 255);
+        transition: border 150ms ease 0s;
+        margin: 0;
+        input {
+            padding: 0.75rem;
+            border: none;
+            outline: none;
+            direction: ltr !important;
+            text-align: right;
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.375rem;
+            color: rgb(58, 61, 66);
+        }
+    }
+    button {
+        margin-left: 8px;
+        transition: all 150ms ease-out 0s;
+        min-width: 6.6875rem;
+        width: auto;
+        height: 2rem;
+        border: 0.09375rem solid rgb(255, 0, 166);
+        border-radius: 0.375rem;
+        color: rgb(255, 255, 255);
+        background-color: rgb(255, 0, 166);
+        font-family: IRANSansMobile;
+        font-size: 0.875rem;
+        font-weight: 500;
+        &:hover {
+            background-color: #ff26b3;
+        }
+    }
+}
+
+.downloadFrom {
+    a {
+        margin-left: 12px;
+    }
+}
+
+.appImg {
+    width: 424px;
+    img {
+        width: 100%;
+        transform: translateY(-31%);
+        left: 0;
+    }
+}
+
+// ------------------------------opportunity------------------------------
+
+.opportunity {
+    margin-top: 150px;
+}
+
+.selling {
+    padding: 3rem;
+    background-color: rgb(249, 250, 251);
+    border-radius: 2rem;
+}
+
+.sellingInfo {
+    width: calc(100% - 350px);
+    h2, p, button{
+        margin-bottom: 40px;
+    }
+    p {
+        color: rgb(58, 61, 66);
+        font-size: 20px;
+    }
+    button {
+        min-width: 6.6875rem;
+        height: 3rem;
+        border: 0.09375rem solid rgb(255, 0, 166);
+        border-radius: 0.375rem;
+        color: rgb(255, 255, 255);
+        background-color: rgb(255, 0, 166);
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.sellingImg {
+    width: 350px;
+    img {
+        width: 100%;
+        left: 0;
+        transform: translateY(-40%);
+    }
+}
+
+// -----------------------------snapfoodIran--------------------------
+
+.snapfoodIran {
+    border-top: 0.0625rem solid rgb(235, 237, 240);
+    margin-top: 40px;
+}
+
+.city {
+    padding: 3px;
+    color: rgb(166, 170, 173);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.3rem;
+    position: relative;
+    &:hover {
+        color: rgb(166, 170, 173);
+    }
+}
+
+.city::before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 40px;
+    background-color: rgb(37, 37, 37);
+    color: #e7e7e7;
+    text-align: center;
+    padding: 2px;
+    position: absolute;
+    left: 80%;
+    top: 110%;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.city:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+// ---------------------------footer---------------------
+
+footer {
+    padding: 3rem;
+    background-color: rgb(249, 250, 251)
+}
+
+.firstCol {
+    
+    h6 {
+        color: #ff00a6;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+    p {
+        color: rgb(83, 86, 92);
+        font-size: 12px;
+    }
+}
+
+.socialIcons>div {
+    padding: 4px;
+    a>div {
+        box-shadow: rgba(58, 61, 66 , 0.06) 0px 1px 0px, rgba(0, 0, 0 , 0.2) 0px 4px 16px -8px;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.09375rem solid rgba(58, 61, 66, 0.06);
+        border-radius: 50%;
+        color: rgb(58, 61, 66);
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.footerLinks>a {
+    display: block;
+    font-size: 13px;
+    color: rgb(58, 61, 66);
+    line-height: 1.8rem;
+    &:hover {
+        color: rgb(58, 61, 66);
+    }
+}
+
+.footerLicense {
+    a {
+        width: 70px;
+        img {
+            width: 100%;
+        }
+    }
+}
